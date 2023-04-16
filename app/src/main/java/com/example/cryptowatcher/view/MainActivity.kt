@@ -1,9 +1,10 @@
-package com.example.cryptowatcher
+package com.example.cryptowatcher.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cryptowatcher.R
 import com.example.cryptowatcher.adapter.CryptoAdapter
 import com.example.cryptowatcher.model.CryptoModel
 import com.example.cryptowatcher.service.CryptoAPI
@@ -12,7 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() ,CryptoAdapter.Listener {
 
-    private val BASE_URL ="https://raw.githubusercontent.com/"
+    //private val BASE_URL ="https://raw.githubusercontent.com/"
+    private val BASE_URL ="https://gist.githubusercontent.com/"
     private var cryptoModels:List<CryptoModel>?=null
 
     private lateinit var cryptoAdapter:CryptoAdapter
